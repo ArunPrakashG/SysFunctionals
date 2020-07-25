@@ -1,0 +1,192 @@
+﻿<Window x:Class="SysFunctionals.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SysFunctionals"
+        mc:Ignorable="d"
+        Title="System Functionals"
+        Height="500"
+        Width="640"
+        ResizeMode="NoResize">
+    <StackPanel Margin="0">
+        <Label Content="Application made by Arun and is made possible by Pluton, a C# Library written by Relickw." />
+        <Label Content="* Some functions require the system to be restarted. such as Enable/Disable defender etc." />
+        <TabControl>
+            <TabItem Header="Tools">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Margin"
+                                    Value="0,10,0,0" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <Button Content="Shutdown computer"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="ShutdownClicked" />
+
+                    <Button Content="Restart computer"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="RestartClicked" />
+
+                    <Button Content="*Screenshot"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="ScreenshotClicked" />
+
+                    <Rectangle Fill="Transparent"
+                               Height="30" />
+                    <Label Content="* Screenshots will be saved in the program directory. (Directory where this application exists)" />
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Security functions">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Margin"
+                                    Value="0,10,0,0" />
+                        </Style>
+                    </StackPanel.Resources>
+                    <Button Content="Disable UAC (User Account Control)"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="UACClicked" />
+
+                    <Button Content="Disable Windows Defender"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="DisableDefenderClicked" />
+
+                    <Button Content="Enable Windows Defender"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="EnableDefenderClicked" />
+
+                    <Button Content="Disable Windows Firewall"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="DisableFirewallClicked" />
+
+                    <Button Content="Enable Windows Firewall"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="EnableFirewallClicked" />
+
+                    <Button Content="Disable Windows SmartScreen"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="DisableSmartScreenClicked" />
+
+                    <Button Content="Enable Windows SmartScreen"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="EnableSmartScreenClicked" />
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Desktop functions">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Margin"
+                                    Value="0,10,0,0" />
+                        </Style>
+                    </StackPanel.Resources>
+
+                    <Button Content="Hide Taskbar"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="HideTaskbarClicked" />
+
+                    <Button Content="Show Taskbar"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="ShowTaskbarClicked" />
+
+                    <Button Content="Set Dark theme"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="SetDarkThemeClicked" />
+
+                    <Button Content="Set Light theme"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="SetLightThemeClicked" />
+                </StackPanel>
+            </TabItem>
+
+            <TabItem Header="Network functions">
+                <StackPanel>
+                    <StackPanel.Resources>
+                        <Style TargetType="{x:Type Button}">
+                            <Setter Property="Margin"
+                                    Value="0,10,0,0" />
+                        </Style>
+                    </StackPanel.Resources>
+
+                    <Button Content="Turn off internet access"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="TurnOffInternetClicked" />
+
+                    <Button Content="Turn on internet access"
+                            FontStyle="Normal"
+                            FontWeight="DemiBold"
+                            FontSize="13"
+                            Height="40"
+                            BorderThickness="1"
+                            Click="TurnOnInternetClicked" />
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+        <Label Content="Waiting for input..." x:Name="statusUpdateLabel" />
+    </StackPanel>    
+</Window>
