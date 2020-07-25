@@ -10,8 +10,9 @@
         Width="640"
         ResizeMode="NoResize">
     <StackPanel Margin="0">
-        <Label Content="Application made by Arun and is made possible by Pluton, a C# Library written by Relickw." />
+        <Label Content="Application made by Arun and is made possible by Pluton, a C# Library written by Relickw." />        
         <Label Content="* Some functions require the system to be restarted. such as Enable/Disable defender etc." />
+        <Label Content="Source URL: https://github.com/ArunPrakashG/SysFunctionals" />
         <TabControl>
             <TabItem Header="Tools">
                 <StackPanel>
