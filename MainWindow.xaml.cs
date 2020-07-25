@@ -24,7 +24,7 @@ namespace SysFunctionals {
 		}
 
 		private void ScreenshotClicked(object sender, RoutedEventArgs e) {
-			string fileName = DateTime.Now.ToString().Trim();
+			string fileName = DateTime.Now.Ticks.ToString();
 			PTools.Screenshot(fileName);
 			statusUpdateLabel.Content = $"Screenshot saved @ {Directory.GetCurrentDirectory()} with name {fileName}";
 		}
